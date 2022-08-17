@@ -91,6 +91,18 @@ public class Player : MonoBehaviour
         {
             isGrounded = true;
         }
+        if (collision.gameObject.tag == ENEMY_TAG)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == ENEMY_TAG)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }
